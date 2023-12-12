@@ -17,20 +17,3 @@ jobs:
           docker login -u ${{ secrets.DOCKERHUB_USERNAME}} -p ${{ secrets.DOCKERHUB_TOKEN}}
           docker push ${{ secrets.DOCKERHUB_USERNAME}}/${{ secrets.DOCKERHUB_NAME}}:latest```
 
-15. Click on "Commit changes..."  then "Commit changes"
-16. Go to the "Actions" tab
-17.  Click on "Publish image to Docker Hub"  (on the left side of your screen) (If you do this **right** it should say **"Publish Image to docker hub" **)
-18. Click on "Run workflow" on the middle left side of your screen
-19.  Click on "Run workflow" and wait for it to do its thing
-
-
-To deploy go to pins and follow the steps on **"render links using docker" **
-Replace the Image URL by copying the whole url of your docker image and paste it into the Image URL in render
-
-Notes:
-A. **If on mobile make sure to format the code the same as its shown should not be in one line or else it wont work**
-B. To make a new docker hub repo just add the new name of it into the  DOCKERHUB_NAME secrets and add your docker hub name inside of it and then follow steps 12. 
-C. if you **mess up step 14** and u get an **"There was an error commting your changes. File could not be edited" **, do the following steps below
-  C1. Click on **"Cancel"** if your still on that screen next to the "Commit changes" green button
-  C2. **Rename** "docker-image.yml" to something different than "docker-image.yml". For example you can name it "attempt-2.yml" but make sure to keep the ".yml" at the end
-  C3. Go to **step 12** and continue.
